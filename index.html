@@ -115,7 +115,26 @@
         </div>
       </section>
 
-
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Abstract. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Computational Overhead</h2>
+              <div class="content has-text-justified">
+                <p>
+                    DINOv2 uses FlashAttention to speed up transformers. The CAD knowledge base is compact, with most parameters outside the knowledge base shared across objects. Foundation models also help reduce training time.
+                    Our network has two components: the Encoder-Decoder, which generates query features, and the Key Feature Extraction network, which creates key features and is saved locally.
+                    Inference times for a single object on the TUD-L dataset are 65ms for the Encoder-Decoder, compared to 61ms for MRCNet. Our model improves accuracy with minimal extra computational cost.
+                    Compared to SurfEmb, our total time, including PnP-RANSAC, is similar, but performance is significantly better. As with other advanced methods like 3DNEL, some external time is always required, but we aim to optimize this further.
+                <p>
+              </div>
+            </div>
+          </div>
+          <!--/ Abstract. -->
+      
+        </div>
+      </section>
       
 
 
