@@ -103,7 +103,7 @@
               <h2 class="title is-3">Abstract</h2>
               <div class="content has-text-justified">
                 <p>
-                    Accurate 6D pose estimation is key for robotic manipulation, enabling precise object localization for tasks like grasping. We present \textit{RAG-6DPose}, a retrieval-augmented approach that leverages 3D CAD models as a knowledge base by integrating both visual and geometric cues. Our RAG-6DPose roughly contains three stages: 
+                    Accurate 6D pose estimation is key for robotic manipulation, enabling precise object localization for tasks like grasping. We present RAG-6DPose, a retrieval-augmented approach that leverages 3D CAD models as a knowledge base by integrating both visual and geometric cues. Our RAG-6DPose roughly contains three stages: 
                     1) Building a Multi-Modal CAD Knowledge Base by extracting 2D visual features from multi-view CAD rendered images and also attaching 3D points;
                     2) Retrieving relevant CAD features from the knowledge base based on the current query image via our ReSPC module; and 3) Incorporating retrieved CAD information to refine pose predictions via retrieval-augmented decoding. Experimental results on standard benchmarks and real-world robotic tasks demonstrate the effectiveness and robustness of our approach, particularly in handling occlusions and novel viewpoints.
                 </p>
@@ -119,10 +119,10 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Visualization</h2>
+                    <h3 class="title is-3">Visualization</h3>
                     <div class="content has-text-justified">
                         <p>
-                            CAD and feature visualization for 8 objects from the LM-O dataset. For each object, the illustration includes three components arranged from top to bottom: the CAD model, the visual feature set F_p, and the key feature F_k
+                            CAD and feature visualization for 8 objects from the LM-O dataset. For each object, the illustration includes three components arranged from top to bottom: the CAD model, the visual feature set F_p, and the key feature F_k.
                         </p>
                         <!-- Add image here -->
                         <img src="static/images/featvis.jpg" alt="Feature Visualization" style="max-width: 100%; height: auto; margin-top: 20px;">
@@ -132,6 +132,58 @@
         </div>
     </section>
     
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h3 class="title is-3">Qualitative results for heavy occlusion scenarios in LM-O</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            From left to right, the images show the original scenes, predictions by our RAG-6DPose, and predictions by SurfEmb. In each case, the object's 3D model, aligned with the estimated 6D pose, is overlaid on the grayscale version of the original images.
+                        </p>
+                        <!-- Add image here -->
+                        <img src="static/images/hallu.png" alt="Feature Visualization" style="max-width: 100%; height: auto; margin-top: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h3 class="title is-3">Qualitative results on YCB-V</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            The upper images show the original scenes, while the lower images display the object pose predictions made by RAG-6DPose. 
+                            In these predictions, the object's 3D model, aligned using the estimated 6D pose, is overlaid onto the original images, which have been converted to grayscale.
+                        </p>
+                        <!-- Add image here -->
+                        <img src="static/images/ycbv4x2.png" alt="Feature Visualization" style="max-width: 100%; height: auto; margin-top: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h3 class="title is-3">Qualitative results on real-world data</h3>
+                    <div class="content has-text-justified">
+                        <p>
+                            The rows (1,3) show the original images, while rows (2, 4) display the object pose predictions from RAG-6DPose. 
+                            In each case, the object's 3D model is aligned with the estimated 6D pose and overlaid on the grayscale version of the original images.
+                        </p>
+                        <!-- Add image here -->
+                        <img src="static/images/real.png" alt="Feature Visualization" style="max-width: 100%; height: auto; margin-top: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
       <section class="section">
         <div class="container is-max-desktop">
